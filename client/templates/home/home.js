@@ -7,6 +7,8 @@ Template.home.rendered = function() {
             var geocoder = new google.maps.Geocoder();
             var latLng   = new google.maps.LatLng( 
             position.coords.latitude, position.coords.longitude);
+            console.log(position.coords.latitude);
+            console.log(position.coords.longitude);
             geocoder.geocode({
                 'latLng': latLng
             }, function (results, status) {
@@ -23,15 +25,20 @@ Template.home.rendered = function() {
         });
         return false;
     });
-
-
-
     $('.carousel').carousel({
     interval: 2000
 });
 
-     $('.carousel2').carousel({
-     interval: 2000
+    $('.carousel2').carousel({
+    interval: 2000
 });
-
 };
+
+Template.home.events({
+    'click #search': function(){
+        event.preventDefault();
+        Router.go('/list');
+       }
+    });
+
+

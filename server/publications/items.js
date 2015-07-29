@@ -13,3 +13,20 @@ Meteor.publishComposite("items", function() {
     // ]
   }
 });
+
+
+Meteor.publishComposite("restaurants", function() {
+  return {
+    find: function() {
+      return Restaurants.find({});
+    }
+    // ,
+    // children: [
+    //   {
+    //     find: function(item) {
+    //       return [];
+    //     }
+    //   }
+    // ]
+  }
+});

@@ -1,5 +1,5 @@
 Items = new Mongo.Collection('items');
-
+Restaurants = new Mongo.Collection('restaurants');
 Items.helpers({
 
 });
