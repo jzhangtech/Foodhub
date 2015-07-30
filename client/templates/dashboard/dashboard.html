@@ -1,26 +1,44 @@
-<template name="dashboard">
-  <div class="template-dashboard">
+<template name="dashboard" >
+
+  
+  <div class="col-md-4 filter-container">
+
+  <div>Filter<a class="">clear all</a></div>
+  <br>
+ 
+  <br>
+  <div>Crusines<a class="">clear</a></div>
+  <br>
+
+
+  <input type="checkbox" name="chinese" value="chinese">
+  apple<br> 
+  <input type="checkbox" name="apple" value="sushi"> 
+  peaches<br>
+  <input type="checkbox" name="pear" value="cheese"> 
+  peaches<br>
+  </div>
+
+
+  <div class="template-dashboard ">
+
     <div class="page-header">
       <h1>Menu</h1>
     </div>
 
+
+
     <ul class="list-group">
-      {{#each restaurants}}
+          {{#each restaurants}}
         <li class="list-group-item">{{ name }} 
           <span class="label label-default">
             {{address}}
             {{zipcode }}
-           
-          </span>
+           </span>
             {{crusine}}
             {{rating}}
-
-        </li>
-      {{/each}}
+          </li>
+            {{/each}}
     </ul>
-
-
-
-
   </div>
 </template>

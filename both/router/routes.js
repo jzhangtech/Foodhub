@@ -1,5 +1,6 @@
 Router.route('/', {
-  name: 'home'
+  name: 'home',
+  controller: 'DashboardController'
 });
 
 Router.route('/checkout', {
@@ -10,15 +11,8 @@ Router.route('/admin', {
   name: 'admin'
 });
 
-Router.route('/list', {
-  name: 'list'
-});
 
 
-Router.route('/dashboard', {
-  name: 'dashboard',
-  controller: 'DashboardController'
-});
 
 
 
