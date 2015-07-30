@@ -15,7 +15,7 @@ Meteor.startup(function(){
     '125 main ave',
     '300 king ave'];
      var crusine = [
-    '-73.43563230000001',
+    'chinese',
     'pizza',
     'sushi',
     'italian',
@@ -23,7 +23,7 @@ Meteor.startup(function(){
     'steak'];
     /*lon-rating*/
      var rating = [
-    '41.10309040000001',
+    '5',
     '2',
     '3',
     '4',
@@ -31,18 +31,18 @@ Meteor.startup(function(){
     '6'];
      var zipcode = [
     '06854',
-    '10002',
-    '10003',
+    '06854',
+    '06854',
     '06855',
     '06856',
-    '10004'];
+    '10001'];
   for (var i = 0; i < names.length; i += 1) {
     Restaurants.insert({
       name: names[i], 
       address:address[i],
       zipcode:zipcode[i],
-      lon:rating[i],
-      lat:crusine[i]});
+      rating:rating[i],
+      crusine:crusine[i]});
   }
 });
 

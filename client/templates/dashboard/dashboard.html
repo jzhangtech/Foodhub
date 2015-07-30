@@ -1,12 +1,41 @@
 <template name="dashboard" >
 
   
-  <div class="col-md-4 filter-container">
+  <div class="col-md-2 filter-container">
 
   <div>Filter<a class="">clear all</a></div>
   <br>
  
   <br>
+  <div>Crusines<a class="">clear</a></div>
+  <br>
+
+  
+  <input type="checkbox" name="chinese" value="chinese">
+  apple
+  <br> 
+  <input type="checkbox" name="apple" value="sushi"> 
+  peaches
+  <br>
+  <input type="checkbox" name="pear" value="cheese"> 
+  peaches
+  <div></div>
+  <br>
+
+  <div>Crusines<a class="">clear</a></div>
+  <br>
+
+
+  <input type="checkbox" name="chinese" value="chinese">
+  apple
+  <br> 
+  <input type="checkbox" name="apple" value="sushi"> 
+  peaches
+  <br>
+  <input type="checkbox" name="pear" value="cheese"> 
+  peaches<div></div>
+  <br>
+
   <div>Crusines<a class="">clear</a></div>
   <br>
 
@@ -17,6 +46,7 @@
   peaches<br>
   <input type="checkbox" name="pear" value="cheese"> 
   peaches<br>
+  <div></div>
   </div>
 
 
@@ -29,16 +59,23 @@
 
 
     <ul class="list-group">
-          {{#each restaurants}}
-        <li class="list-group-item">{{ name }} 
-          <span class="label label-default">
-            {{address}}
-            {{zipcode }}
-           </span>
-            {{crusine}}
-            {{rating}}
-          </li>
-            {{/each}}
+
+      {{#each restaurants}}
+       <li class="list-group-item col-md-9">
+          
+          <span>
+          <img src="http://www.cmu.edu/dining/images/food-400/sushi.jpg" width="100" height="75" > 
+                Store:{{ name }} 
+         
+                  
+            Address:{{address}}
+            Zipcode:{{zipcode }}
+            Crusine:{{crusine}}
+            Rating:{{rating}}<div class="fa fa-star"> </div>
+          </span>
+         
+      </li>
+           {{/each}}
     </ul>
   </div>
 </template>
