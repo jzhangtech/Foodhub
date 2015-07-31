@@ -3,11 +3,11 @@
   
   <div class="col-md-2 filter-container">
 
-  <div>Filter<a class="">clear all</a></div>
+  <div>Filter<a class="" style="padding-left:10px;">clear all</a></div>
   <br>
  
   <br>
-  <div>Crusines<a class="">clear</a></div>
+  <div>Cuisines<a class="" style="padding-left:10px;">clear</a></div>
   <br>
 
   
@@ -22,7 +22,7 @@
   <div></div>
   <br>
 
-  <div>Crusines<a class="">clear</a></div>
+  <div>Cuisines<a class="" style="padding-left:10px;">clear</a></div>
   <br>
 
 
@@ -36,7 +36,7 @@
   peaches<div></div>
   <br>
 
-  <div>Crusines<a class="">clear</a></div>
+  <div>Cuisines<a class="" style="padding-left:10px;">clear</a></div>
   <br>
 
 
@@ -53,7 +53,7 @@
   <div class="template-dashboard ">
 
     <div class="page-header">
-      <h1>Menu</h1>
+      <h1><a>Menu</a></h1>
     </div>
 
 
@@ -65,13 +65,19 @@
           
           <span>
           <img src="http://www.cmu.edu/dining/images/food-400/sushi.jpg" width="100" height="75" > 
-                Store:{{ name }} 
+                <a href="{{pathFor 'menu'}}">{{ name }}</a> 
+
+
+              
          
-                  
+            <table class="">      
             Address:{{address}}
             Zipcode:{{zipcode }}
             Crusine:{{crusine}}
             Rating:{{rating}}<div class="fa fa-star"> </div>
+
+             </table>
+          
           </span>
          
       </li>

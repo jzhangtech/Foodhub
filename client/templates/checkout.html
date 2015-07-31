@@ -5,32 +5,72 @@
              type="text"> 	
     	</div>
 
-    <table id="address">
+    <table id="address"  style="color:black">
       <tr>
-        <td class="label">Street address</td>
+        <td class="title">Street address</td>
         <td class="slimField"><input class="field" id="street_number"
               disabled="true"></td>
         <td class="wideField" colspan="2"><input class="field" id="route"
               disabled="true"></td>
       </tr>
-      <tr>
-        <td class="label">City</td>
+      <tr> 
+        <td class="title">City</td>
         <td class="wideField" colspan="3"><input class="field" id="locality"
               disabled="true"></td>
       </tr>
       <tr>
-        <td class="label">State</td>
+        <td class="title">State</td>
         <td class="slimField"><input class="field"
               id="administrative_area_level_1" disabled="true"></td>
-        <td class="label">Zip code</td>
+       </tr>
+
+       <tr>
+              
+        <td class="title">Zip code</td>
         <td class="wideField"><input class="field" id="postal_code"
               disabled="true"></td>
+
       </tr>
       <tr>
-        <td class="label">Country</td>
+        <td class="title">Country</td>
         <td class="wideField" colspan="3"><input class="field"
               id="country" disabled="true"></td>
       </tr>
     </table>
+
+<div class="container-fluid">
+    <table id="payment"  style="color:black">
+      <tr>
+         <td class="title">Card Number</td>
+        <td class="wideField"><input class="field" id="postal_code"
+              disabled="true"></td>
+        
+      </tr>
+     
+      <tr>
+        <td class="title">Card Type</td>
+        <td class="slimField"><input class="field"
+              id="administrative_area_level_1" disabled="true"></td>
+       </tr>
+
+       <tr>
+              
+        <td class="title">Paypal</td>
+        <td class="wideField"><input class="field" id="postal_code"
+              disabled="true"></td>
+             
+      </tr>
+      <tr>
+        <td class="title">CVV</td>
+        <td class="wideField" colspan="3"><input class="field"
+              id="country" disabled="true"></td>
+      </tr>
+    </table>
+
+
+
+    <button class="btn btn-primary fa fa-car"> Deliver</button>
+
+</div>
   
   </template>

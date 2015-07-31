@@ -1,9 +1,13 @@
 Template.home.rendered = function() {
-
-	 $("#geolocation").click(function (event) {
+     $("#geolocation").click(function (event) {
         event.preventDefault();
         $(this).html('');
         navigator.geolocation.getCurrentPosition(function (position) {
+            
+            var autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('autocomplete')),
+                    {types: ['geocode'] });
+ 
             var geocoder = new google.maps.Geocoder();
             var latLng   = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             console.log(position.coords.latitude);
@@ -11,16 +15,14 @@ Template.home.rendered = function() {
             geocoder.geocode({
                 'latLng': latLng
             }, function (results, status) {
+                console.log(results[0]);
                 for (var i = 0; i < results[0].address_components.length; i++) {
                     var address = results[0].address_components[i];
                     if (address.types[0] == "postal_code") {
                         $('#zipcode').html(address.long_name);
 
                          Session.set("zipcode",address.long_name);
-                         
-
-
-                        $('#location').val(results[0].formatted_address);
+                         $('.searchbar').val(results[0].formatted_address);
                           
                         
                     }
@@ -64,7 +66,7 @@ Template.home.events({
 
 Template.home.events({
     'click #search': function() {
-    var ele =document.getElementById('location').value;
+    var ele =document.getElementById('autocomplete').value;
    
       
         Session.set("name","Pizza Pizza");
@@ -93,3 +95,6 @@ Template.dashboard.helpers ({
 
     }
 });
+
+
+

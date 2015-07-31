@@ -1,20 +1,35 @@
 <Template name="home">
-  
-  <div class="col-sm-3">
-  <input class="form-control" type="submit" id="homebtn" value="Order">
-  </div>
-  <div class="col-sm-3">
-  <input class="form-control" type="submit" id="restaurantbtn" value="Restaurants">
-  </div>
-  <div class="col-sm-3">
-  <input class="form-control" type="submit" id="restaurantbtn" value="Restaurants">
-  </div>
-  <div class="col-sm-3">
-  <input class="form-control" type="submit" id="restaurantbtn" value="Restaurants">
-  </div>
+
+
+<div class="container-fluid" >
+      
+   
+    <a class="btn btn-default fa fa-search col-sm-3" id="homebtn">
+       Order
+    </a>
+
+    <a class="btn btn-default fa fa fa-building col-sm-3"   id="restaurantbtn">
+       Restaurants
+    </a>
+    
+     <a href="{{pathFor 'menu'}}" class="btn btn-default fa fa-pie-chart col-sm-3" id="Menubtn">
+      Menu
+    </a>
+
+ 
+    <a href="{{pathFor 'checkout'}}" class="btn btn-default fa fa-credit-card col-sm-3" id="checkoutbtn">
+      Checkout
+    </a>
+
+</div>
+
+  <div class="page-header container-fluid" style="text-align:center; font-style:italic;">
+  <h1>Foodie's</h1>
+</div>
   
   <div  id="home2" style="display:block;" class="innerBox">
     {{> home2 }}
+
   </div>
   
   <div id="restaurant" style="display:none;" class="innerBox">
@@ -27,32 +42,37 @@
 
 <Template name="home2" >
 
-    <div class="page-header col-md-6">
-      <h1>Foodhub</h1>
-      
+    <div class="container-fluid">
+
+
+      <div class="span12 well">
      
-        <button class="fa fa-map-marker btn btn-default" id="geolocation">
          
-        </button>
-        <i class="fa fa-circle-o-notch fa-1x fa-spin"></i>
-     	  <input type="text" id="location" class="searchbar " placeholder="enter your address.." style="width: 100%;" value="foodhere"> 
-        <button class="btn btn-primary search" id="search" value="search"> FEED ME!!
-        </button>  
 
-    </div>
-
-      <div class=" col-md-6">
+          <button class="fa fa-map-marker btn btn-default" id="geolocation"></button>
+          <i class="fa fa-circle-o-notch fa-1x fa-spin"></i>
+        
+          <input id="autocomplete" class="searchbar"  placeholder="Enter Your Address" 
+        type="text"  style="width:50%">   
+             
+        
        
-      
+         
+           
+          <i class="fa fa-search"></i>
+        <input id="category" class=""  placeholder="e.g. Pizza Sushi" type="text" style="width:30%">  
+          <button class="btn btn-primary search" id="search" value="search"> FEED ME!!
+          </button>  
+
+        </div>
      
         
-        <button class="fa fa-map-marker btn btn-primary" id="geolocation">
-         I'm SUPER LAZY!!
-        </button>
-       </div>
- 
- 
-    <div id="zipcode">Zip Code</div>
+   </div>
+
+    
+ <!--
+    <div id="postal_code">session set!!</div>
+    <div id="zipcode">Zip Code</div> -->
 
 <p></p>
       <h4>Order by</h4>
@@ -66,13 +86,13 @@
   <!-- Carousel items -->
             <div class="carousel-inner">
               <div class="active item">
-              <img src="https://alixduffy.files.wordpress.com/2010/05/gourmet-food.jpg" alt="Mountain View" style="width:100%;height:228px;">
+              <img src="https://alixduffy.files.wordpress.com/2010/05/gourmet-food.jpg" alt="Mountain View" style="width:100%;height:200px;">
               </div>
               <div class="item">
-              <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTW7G7j3K958tbfbkEapqw6CYR86PEVuT6WbxKFLqZRiarxbZGRSA" alt="Mountain View" style="width:100%;height:228px;">
+              <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTW7G7j3K958tbfbkEapqw6CYR86PEVuT6WbxKFLqZRiarxbZGRSA" alt="Mountain View" style="width:100%;height:200px;">
               </div>
               <div class="item">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Western_Sushi.jpg" alt="Sushi" style="width:100%;height:228px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Western_Sushi.jpg" alt="Sushi" style="width:100%;height:200px;">
               </div>
             </div>
   <!-- Carousel nav -->
@@ -90,13 +110,13 @@
   <!-- Carousel items -->
           <div class="carousel-inner">
             <div class="active item">
-              <img src="http://www.donovanssteakhouse.com/media/food/all/donovans-food-(24).jpg" alt="" style="width:100%;height:228px;">
+              <img src="http://www.donovanssteakhouse.com/media/food/all/donovans-food-(24).jpg" alt="" style="width:100%;height:200px;">
             </div>
             <div class="item">
-              <img src="https://s-media-cache-ak0.pinimg.com/736x/a8/2b/1a/a82b1a7e3c21a1026fc5d90746f621c9.jpg" alt="" style="width:100%;height:228px;">
+              <img src="https://s-media-cache-ak0.pinimg.com/736x/a8/2b/1a/a82b1a7e3c21a1026fc5d90746f621c9.jpg" alt="" style="width:100%;height:200px;">
             </div>
             <div class="item">
-              <img src="http://dconheels.com/wp-content/uploads/2013/09/Newtons-Noodles-Storefront-by-Travis-Vaughn.jpg" alt="Sushi" style="width:100%;height:228px;">
+              <img src="http://dconheels.com/wp-content/uploads/2013/09/Newtons-Noodles-Storefront-by-Travis-Vaughn.jpg" alt="Sushi" style="width:100%;height:200px;">
             </div>
           </div>
   <!-- Carousel nav -->

@@ -11,6 +11,9 @@ Router.route('/admin', {
   name: 'admin'
 });
 
+Router.route('/menu', {
+  name: 'menu'
+});
 
 
 
