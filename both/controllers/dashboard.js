@@ -6,7 +6,7 @@ DashboardController = AppController.extend({
    restaurants: Restaurants.find({})
   },
   onAfterAction: function () {
-    Meta.setTitle('Dashboard');
+    Meta.setTitle('Foodies');
   }
 });
 
