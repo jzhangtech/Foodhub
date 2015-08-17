@@ -1,4 +1,5 @@
-# foodhub
-Grubhub clone made using Meteor.JS
+#Foodies
+
+Grubhub clone made using Meteor
 
 -Work in Progess
