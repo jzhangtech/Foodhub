@@ -1,27 +1,28 @@
 Template.home.rendered = function() {
+     
+     var autocomplete = new google.maps.places.Autocomplete(
+        (document.getElementById('autocomplete')),
+        {types: ['geocode'] }
+        );
+     
      $("#geolocation").click(function (event) {
         event.preventDefault();
         $(this).html('');
-        navigator.geolocation.getCurrentPosition(function (position) {
-            
-            var autocomplete = new google.maps.places.Autocomplete(
-                (document.getElementById('autocomplete')),
-                    {types: ['geocode'] });
- 
+            navigator.geolocation.getCurrentPosition(function (position) {
+           
             var geocoder = new google.maps.Geocoder();
             var latLng   = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            console.log(position.coords.latitude);
-            console.log(position.coords.longitude);
+          
             geocoder.geocode({
                 'latLng': latLng
-            }, function (results, status) {
-                console.log(results[0]);
-                for (var i = 0; i < results[0].address_components.length; i++) {
+            }, 
+            function (results, status) {
+               for (var i = 0; i < results[0].address_components.length; i++) {
                     var address = results[0].address_components[i];
                     if (address.types[0] == "postal_code") {
+                        
                         $('#zipcode').html(address.long_name);
-
-                         Session.set("zipcode",address.long_name);
+                        Session.set("zipcode",address.long_name);
                          $('.searchbar').val(results[0].formatted_address);
                           
                         
@@ -31,6 +32,7 @@ Template.home.rendered = function() {
         });
         return false;
     }); 
+    
     $('.carousel').carousel({
     interval: 2000
 });
@@ -51,12 +53,12 @@ Template.home.events({
 
 Template.home.events({
     'click #homebtn': function() {
-        document.getElementById('home2').style.display = 'block';
+        document.getElementById('geoorder').style.display = 'block';
         document.getElementById('restaurant').style.display = 'none';
       
     },
     'click #restaurantbtn': function() {
-        document.getElementById('home2').style.display = 'none';
+        document.getElementById('geoorder').style.display = 'none';
         document.getElementById('restaurant').style.display = 'block';
       
     }
@@ -66,35 +68,28 @@ Template.home.events({
 
 Template.home.events({
     'click #search': function() {
-    var ele =document.getElementById('autocomplete').value;
-   
-      
+        var ele =document.getElementById('autocomplete').value;
         Session.set("name","Pizza Pizza");
         Session.set("name2","China King");
-       
-       
-      
-       document.getElementById('home2').style.display = 'none';
-       document.getElementById('restaurant').style.display = 'block';
-
-       }
+        document.getElementById('geoorder').style.display = 'none';
+        document.getElementById('restaurant').style.display = 'block';
+        },
+    'keyup .searchbar': function() {
+        var ele =document.getElementById('autocomplete').value;
+        Session.set("name","Pizza Pizza");
+        Session.set("name2","China King");
+        document.getElementById('geoorder').style.display = 'none';
+        document.getElementById('restaurant').style.display = 'block';
+        },
+         'keyup .categorysearch': function() {
+        var ele =document.getElementById('autocomplete').value;
+        Session.set("name","Pizza Pizza");
+        Session.set("name2","China King");
+        document.getElementById('geoorder').style.display = 'none';
+        document.getElementById('restaurant').style.display = 'block';
+        }
     });
 
-
-
-Template.dashboard.helpers ({
-     restaurants: function() {
-
-/*
-    var ele  = document.getElementById('search');
-    console.log(rsg);
-    */
-
-      console.log(Session.get("zipcode"));
-      return Restaurants.find({zipcode:Session.get("zipcode")});
-
-    }
-});
 
 
 

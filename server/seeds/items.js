@@ -3,24 +3,24 @@ Meteor.startup(function(){
   var names = [
     'China King',
     'Pizza Pizza',
-    'BAGEL',
-    'SUSHI',
-    'PALACE',
-    'Apples'];
+    'BAGEL Shop',
+    'SUSHI Palace',
+    'PALACE Cake',
+    'Apples Cupcake'];
     var address = [
-    '280 connecticut ave',
-    '167 west cedar st.',
-    '351 broome st.',
-    '125 broadway',
-    '125 main ave',
-    '300 king ave'];
+    '280 Connecticut Ave',
+    '167 West Cedar St.',
+    '351 Broome St.',
+    '125 Broadway',
+    '125 Main Ave',
+    '300 King Ave'];
      var crusine = [
-    'chinese',
-    'pizza',
-    'sushi',
-    'italian',
-    'burger',
-    'steak'];
+    'Chinese',
+    'Pizza',
+    'Sushi',
+    'Italian',
+    'Burger',
+    'Steak'];
     /*lon-rating*/
      var rating = [
     '5',
@@ -30,9 +30,9 @@ Meteor.startup(function(){
     '5',
     '6'];
      var zipcode = [
-    '06901',
-    '06901',
-    '06901',
+    '06854',
+    '06854',
+    '06854',
     '06902',
     '06856',
     '10001'];
@@ -45,5 +45,7 @@ Meteor.startup(function(){
       crusine:crusine[i]});
   }
 });
+
+
 
 

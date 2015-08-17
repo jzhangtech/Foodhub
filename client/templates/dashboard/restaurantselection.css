@@ -1,0 +1,25 @@
+.filter-container{
+  float:right;
+  clear:both;
+  text-align: left;
+
+}  
+.restaurantlist{
+	text-align: center;
+
+}
+
+.vcenter{
+	margin-top: 2em;	
+}
+.bcenter{
+	margin-top:1em;	
+}
+
+.restaurantlist>li{
+
+border: 2px dashed #A7A37E;}
+
+br{
+	padding:1em;
+}

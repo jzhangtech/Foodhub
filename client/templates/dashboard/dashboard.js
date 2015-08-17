@@ -1,5 +1,0 @@
-Template.dashboard.rendered = function() {
-
-};
-
-

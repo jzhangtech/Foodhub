@@ -24,3 +24,5 @@ aldeed:collection2
 aldeed:autoform
 mdg:geolocation
 jquery
+houston:admin
+useraccounts:iron-routing

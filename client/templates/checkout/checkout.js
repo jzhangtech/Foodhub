@@ -1,6 +1,5 @@
-
-
 var placeSearch, autocomplete;
+
 var componentForm = {
   street_number: 'short_name',
   route: 'long_name',
@@ -9,6 +8,7 @@ var componentForm = {
   country: 'long_name',
   postal_code: 'short_name'
 };
+
 
 Template.checkout.rendered=function initialize() {
   // Create the autocomplete object, restricting the search
