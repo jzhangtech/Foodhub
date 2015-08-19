@@ -1,4 +1,4 @@
-DashboardController = AppController.extend({
+restaurantController = AppController.extend({
   waitOn: function() {
     return this.subscribe('restaurants');
   },
@@ -10,7 +10,7 @@ DashboardController = AppController.extend({
   }
 });
 
-DashboardController.events({
+restaurantController.events({
   'click [data-action=doSomething]': function (event, template) {
     event.preventDefault();
     

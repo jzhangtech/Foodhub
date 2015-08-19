@@ -1,6 +1,6 @@
 Router.route('/', {
   name: 'home',
-  controller: 'DashboardController'
+  controller: 'restaurantController'
 });
 
 Router.route('/checkout', {
@@ -12,12 +12,12 @@ Router.route('/checkout', {
 Router.route('/menu', {
   name: 'menu'
 });
-Router.route('/dashboard', {
-  name: 'dashboard'
+Router.route('/restaurant', {
+  name: 'restaurant'
 });
 
 
 
 Router.plugin('ensureSignedIn', {
-  only: ['dashboard']
+  only: ['restaurant']
 });

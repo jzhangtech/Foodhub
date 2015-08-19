@@ -1,14 +1,14 @@
-Template.dashboard.rendered = function() {
+Template.restaurant.rendered = function() {
 
 };
 
-Template.dashboard.helpers ({
+Template.restaurant.helpers ({
     restaurants: function() {
     return Restaurants.find({});
     }
 });
 
-Template.dashboard.events({
+Template.restaurant.events({
   'click .order': function() {
 
   Router.go('/menu');

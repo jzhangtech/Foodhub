@@ -43,12 +43,7 @@ Template.home.rendered = function() {
 
 };
 
-Template.home.events({
-    'click #search': function(){
-        event.preventDefault();
-        
-       }
-    });
+
 
 
 Template.home.events({
@@ -67,28 +62,29 @@ Template.home.events({
 
 
 Template.home.events({
-    'click #search': function() {
+    'click #search': function(e) {
         var ele =document.getElementById('autocomplete').value;
-        Session.set("name","Pizza Pizza");
-        Session.set("name2","China King");
         document.getElementById('geoorder').style.display = 'none';
         document.getElementById('restaurant').style.display = 'block';
         },
-    'keyup .searchbar': function() {
+    
+    'keyup .searchbar': function(e) {
+        if (e.type == "keyup" && e.which == 13){
         var ele =document.getElementById('autocomplete').value;
-        Session.set("name","Pizza Pizza");
-        Session.set("name2","China King");
-        document.getElementById('geoorder').style.display = 'none';
-        document.getElementById('restaurant').style.display = 'block';
-        },
-         'keyup .categorysearch': function() {
-        var ele =document.getElementById('autocomplete').value;
-        Session.set("name","Pizza Pizza");
-        Session.set("name2","China King");
         document.getElementById('geoorder').style.display = 'none';
         document.getElementById('restaurant').style.display = 'block';
         }
-    });
+    },
+        
+    
+    'keyup .categorysearch': function(e) {
+        if (e.type == "keyup" && e.which == 13){
+        var ele =document.getElementById('autocomplete').value;
+        document.getElementById('geoorder').style.display = 'none';
+        document.getElementById('restaurant').style.display = 'block';
+        }
+    }
+});
 
 
 

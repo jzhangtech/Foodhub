@@ -1,76 +1,84 @@
 <template name="checkout" >
-	
-    	<div id="locationField">
-     		<input id="autocomplete" placeholder="Enter your address"
-             type="text"> 	
-    	</div>
+	<div id="locationField">
+    <input id="autocomplete" placeholder="Enter your address" type="text"> 	
+  </div>
+  
+  <table id="address"  style="color:black">
+    <tr>
+      <td class="title">Street address
+      </td>
+      <td class="slimField">
+        <input class="field" id="street_number" disabled="true">
+      </td>
+      <td class="wideField" colspan="2">
+        <input class="field" id="route" disabled="true">
+      </td>
+    </tr>
+    
+    <tr> 
+      <td class="title">City
+      </td>
+      <td class="wideField" colspan="3">
+        <input class="field" id="locality" disabled="true">
+      </td>
+    </tr>
+     
+    <tr>
+      <td class="title">State
+      </td>
+      <td class="slimField">
+        <input class="field" id="administrative_area_level_1" disabled="true">
+      </td>
+    </tr>
 
-    <table id="address"  style="color:black">
-      <tr>
-        <td class="title">Street address</td>
-        <td class="slimField"><input class="field" id="street_number"
-              disabled="true"></td>
-        <td class="wideField" colspan="2"><input class="field" id="route"
-              disabled="true"></td>
-      </tr>
-      <tr> 
-        <td class="title">City</td>
-        <td class="wideField" colspan="3"><input class="field" id="locality"
-              disabled="true"></td>
-      </tr>
-      <tr>
-        <td class="title">State</td>
-        <td class="slimField"><input class="field"
-              id="administrative_area_level_1" disabled="true"></td>
-       </tr>
-
-       <tr>
-              
-        <td class="title">Zip code</td>
-        <td class="wideField"><input class="field" id="postal_code"
-              disabled="true"></td>
-
-      </tr>
-      <tr>
-        <td class="title">Country</td>
-        <td class="wideField" colspan="3"><input class="field"
-              id="country" disabled="true"></td>
-      </tr>
-    </table>
-
-<div class="container-fluid">
-    <table id="payment"  style="color:black">
-      <tr>
-         <td class="title">Card Number</td>
-        <td class="wideField"><input class="field" id="postal_code"
-              disabled="true"></td>
-        
+    <tr>
+      <td class="title">Zip code
+      </td>
+      <td class="wideField">
+        <input class="field" id="postal_code" disabled="true">
+      </td>
+    </tr>
+      
+    <tr>
+      <td class="title">Country
+      </td>
+      <td class="wideField" colspan="3">
+        <input class="field" id="country" disabled="true">
+      </td>
+    </tr>
+    
+    <tr>
+        <td class="title">Card Number
+        </td>
+        <td class="wideField">
+          <input class="field" id="postal_code" disabled="true">
+        </td>
       </tr>
      
       <tr>
-        <td class="title">Card Type</td>
-        <td class="slimField"><input class="field"
-              id="administrative_area_level_1" disabled="true"></td>
+        <td class="title">Card Type
+        </td>
+        <td class="slimField">
+          <input class="field" id="administrative_area_level_1" disabled="true">
+        </td>
        </tr>
 
-       <tr>
-              
-        <td class="title">Paypal</td>
-        <td class="wideField"><input class="field" id="postal_code"
-              disabled="true"></td>
-             
-      </tr>
       <tr>
-        <td class="title">CVV</td>
-        <td class="wideField" colspan="3"><input class="field"
-              id="country" disabled="true"></td>
+        <td class="title">Paypal
+        </td>
+        <td class="wideField">
+          <input class="field" id="postal_code" disabled="true">
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="title">CVV
+        </td>
+        <td class="wideField" colspan="3">
+          <input class="field" id="country" disabled="true"></td>
       </tr>
     </table>
-
-
-
+    
     <button class="btn btn-primary fa fa-car"> Deliver</button>
-
-</div>
-  
-  </template>
+ 
+</template>
