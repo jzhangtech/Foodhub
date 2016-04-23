@@ -1,26 +1,27 @@
 <Template name="home">
-  <div class="container-fluid" >
-      <a class="btn btn-default fa fa-search col-sm-3" id="homebtn">
-      Order</a>
-      <a class="btn btn-default fa fa fa-building col-sm-3"   id="restaurantbtn">
-      Restaurants</a>
-      <a href="{{pathFor 'menu'}}" class="btn btn-default fa fa-pie-chart col-sm-3" id="Menubtn">
-      Menu</a>
-      <a href="{{pathFor 'checkout'}}" class="btn btn-default fa fa-credit-card col-sm-3" id="checkoutbtn">
-      Checkout</a>
-  </div>
-  
-  <h3 class="page-header">
-    Welcome to Foodie's, Lets Order Some Food
-  </h3>
-  
-  <div  id="geoorder" style="display:block;" class="innerBox">
-    {{> geoorder }}
-  </div>
-    
-  <div id="restaurant" style="display:none;" class="innerBox">
-    {{> dashboard }}
-  </div>
-  
-</Template>
+  <div class="container-fluid">
+    <div class="col-xs-12">
+        <a class="btn btn-default fa fa-search col-xs-3" id="homebtn">
+          Order</a>
+        <a class="btn btn-default fa fa fa-building col-xs-3" id="restaurantbtn">
+          Restaurants</a>
+        <a href="{{pathFor 'menu'}}" class="btn btn-default fa fa-pie-chart col-xs-3" id="Menubtn">
+          Menu</a>
+        <a href="{{pathFor 'checkout'}}" class="btn btn-default fa fa-credit-card col-xs-3" id="checkoutbtn">
+          Checkout</a>
+    </div>
 
+    <h3 class="page-header">
+      Welcome to Foodie's, Lets Order Some Food
+    </h3>
+
+    <div id="geoorder" style="display:block;" class="innerBox">
+        {{> geoorder}}
+    </div>
+
+    <div id="restaurant" style="display:none;" class="innerBox">
+        {{> dashboard }}
+    </div>
+  </div>
+
+</Template>

@@ -1,85 +1,81 @@
-
-
 <template name="menu">
 
-	 <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row">
             <div class="span2">
-                <div>Filter<a class="" style="padding-left:10px;">clear all</a></div>
-  <br>
- 
-  <br>
-  <div>Cuisines<a class="" style="padding-left:10px;">clear</a></div>
-  <br>
+                <div>Filter<a class="" style="padding-left:10px;">clear all</a>
+                </div>
+                <br>
 
-  
-  <input type="checkbox" name="chinese" >
-  Apple
-  <br> 
-  <input type="checkbox" name="apple" > 
-  Peaches
-  <br>
-  <input type="checkbox" name="pear"> 
-   Pear
-  <div></div>
-  <br>
+                <br>
+                <div>Cuisines<a class="" style="padding-left:10px;">clear</a>
+                </div>
+                <br>
+
+
+                <input type="checkbox" name="chinese"> Apple
+                <br>
+                <input type="checkbox" name="apple"> Peaches
+                <br>
+                <input type="checkbox" name="pear"> Pear
+                <div></div>
+                <br>
             </div>
             <div class="span7 prodlist">
 
-            	<p>SORRY, We're Closed</p>
-                
-            </div>
-         <div class="span3">
-                 <div class="page-header">
-        			<h1>
-            			<small>My Cart</small>
-        				</h1>
-    				</div>
-
-
-
-    <table class="span4 table table-striped table-bordered table-hover" style=" text-align: right;">
-        <thead>
-        <th>Qty</th>
-        <th>Product</th>
-        <th>Price</th>
-        <th></th>
-        </thead>
-        <tbody>
-        
-        <tr>
-            <td>qty</td>
-            <td>productname</td>
-            <td>$$currency price</td>
-            <td><span class="label-important label removeci">X</span></td>
-        </tr>
-      
-        <tr>
-            <td class="totalcol" colspan="2">SubTotal:</td>
-            <td colspan="2">subtotal:$100</td>
-        </tr>
-        <tr>
-            <td class="totalcol" colspan="2">Tax 6%:</td>
-            <td colspan="2">tax:$100</td>
-        </tr>
-        <tr>
-            <td class="totalcol" colspan="2">Total:</td>
-            <td colspan="2">total:$100</td>
-        </tr>
-        </tbody>
-    </table>
-
-
+                <p>SORRY, We're Closed</p>
 
             </div>
-<a href="{{pathFor 'checkout'}}" class="btn btn-primary fa fa-shopping-cart" id="checkoutbtn">Checkout </a>
+            <div class="span3">
+                <div class="page-header">
+                    <h1>
+                  <small>My Cart</small>
+                </h1>
+                </div>
 
-   
+
+
+                <table class="span4 table table-striped table-bordered table-hover" style=" text-align: right;">
+                    <thead>
+                        <th>Qty</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>qty</td>
+                            <td>productname</td>
+                            <td>$$currency price</td>
+                            <td><span class="label-important label removeci">X</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="totalcol" colspan="2">SubTotal:</td>
+                            <td colspan="2">subtotal:$100</td>
+                        </tr>
+                        <tr>
+                            <td class="totalcol" colspan="2">Tax 6%:</td>
+                            <td colspan="2">tax:$100</td>
+                        </tr>
+                        <tr>
+                            <td class="totalcol" colspan="2">Total:</td>
+                            <td colspan="2">total:$100</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+            </div>
+            <a href="{{pathFor 'checkout'}}" class="btn btn-primary fa fa-shopping-cart" id="checkoutbtn">Checkout </a>
+
+
         </div>
     </div>
 </template>
-		
-
 		
 
 
